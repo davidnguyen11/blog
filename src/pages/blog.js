@@ -37,6 +37,7 @@ const ReadingTime = styled.h5`
 `
 
 const IndexPage = ({ data }) => {
+  console.log('dasdasd', data);
   return (
     <Layout>
       <SEO title="Blog" />
@@ -56,7 +57,7 @@ const IndexPage = ({ data }) => {
                 <ArticleDate>{node.frontmatter.date}</ArticleDate>
                 <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
               </div>
-              <p>{node.excerpt}</p>
+              <p>{node.frontmatter.description}</p>
             </Link>
           </div>
         ))}
@@ -81,6 +82,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            description
             date(formatString: "DD MMMM, YYYY")
             path
           }
