@@ -22,6 +22,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-147652451-1`,
+      },
+    },
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-transformer-remark`,

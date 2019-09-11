@@ -37,7 +37,6 @@ const ReadingTime = styled.h5`
 `
 
 const IndexPage = ({ data }) => {
-  console.log('dasdasd', data);
   return (
     <Layout>
       <SEO title="Blog" />
