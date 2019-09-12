@@ -40,8 +40,10 @@ const LandingBio = () => (
     render={data => (
       <OuterContainer>
         <Container>
-          <NameHeader>{data.site.siteMetadata.title}</NameHeader>
-          <Description>Software Engineer</Description>
+          <NameHeader>
+            <span role='img' aria-label='I build stuffs'>🍺👨🏻‍💻☕️ & 📸</span>
+          </NameHeader>
+          <Description>I build stuffs</Description>
         </Container>
       </OuterContainer>
     )}
