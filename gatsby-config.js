@@ -3,6 +3,8 @@ module.exports = {
     title: `🍺👨🏻‍💻☕️Dzung Nguyen`,
     description: `Personal blog by Dzung Nguyen`,
     author: `@davidnguyen1791`,
+    url: `https://www.dzungnguyen.dev`,
+    image: `/images/avatar.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
