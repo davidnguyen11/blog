@@ -1,7 +1,7 @@
 ---
-title: next.js at Cho Tot
+title: "next.js at Cho Tot"
 date: "2017-06-16"
-description: Every day, Chợ tốt (Chotot) receives over 1 million visits cross platforms, most of the traffic comes from mobile devices...
+description: "Every day, Chợ tốt (Chotot) receives over 1 million visits cross platforms, most of the traffic comes from mobile devices..."
 draft: false
 path: "/blog/nextjs-at-chotot"
 ---

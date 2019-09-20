@@ -1,7 +1,7 @@
 ---
 title: "How Chợ Tốt builds the global “Header & Footer” using React"
 date: "2019-01-31"
-description: In 2016, Chợ Tốt rebuilt frontend web application using React & Redux for business expansion. Likewise, we also decided to step by step migrate current services to Microservices Architecture...
+description: "In 2016, Chợ Tốt rebuilt frontend web application using React & Redux for business expansion. Likewise, we also decided to step by step migrate current services to Microservices Architecture..."
 draft: false
 path: "/blog/how-chotot-builds-global-header-footer-using-react"
 ---

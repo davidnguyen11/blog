@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import LandingBio from "../components/landing-bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Landing from '../components/landing';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
 const AboutPage = () => {
   const { site } = useStaticQuery(
@@ -21,15 +21,19 @@ const AboutPage = () => {
         }
       }
     `
-  )
-  const image = `${site.siteMetadata.url}${site.siteMetadata.image}`
+  );
+  const image = `${site.siteMetadata.url}${site.siteMetadata.image}`;
 
   return (
     <Layout>
-      <SEO title="About" image={image} keywords={[`gatsby`, `application`, `react`]} />
-      <LandingBio />
+      <SEO
+        title="About"
+        image={image}
+        keywords={[`gatsby`, `application`, `react`]}
+      />
+      <Landing />
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

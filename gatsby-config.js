@@ -9,6 +9,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-less`,
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
@@ -30,7 +33,6 @@ module.exports = {
         trackingId: `UA-147652451-1`,
       },
     },
-    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

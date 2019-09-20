@@ -1,7 +1,7 @@
 ---
-title: NextJS deployment pipeline on S3 with Gitlab-CI
+title: "NextJS deployment pipeline on S3 with Gitlab-CI"
 date: "2019-04-27"
-description: NextJS was released in 2016. Since then it has become one of the largest frameworks that support Server-side Rendering (SSR) with ReactJS & NodeJS...
+description: "NextJS was released in 2016. Since then it has become one of the largest frameworks that support Server-side Rendering (SSR) with ReactJS & NodeJS..."
 draft: false
 path: "/blog/nextjs-deployment-pipeline-on-s3-with-gitlab-ci"
 ---
@@ -180,7 +180,7 @@ versus
 
 So if we upload the whole built directory to S3 and run our web application. It is absolutely not working.
 
-** Solution
+**Solution**
 
 Because of the deployment is separated from the development stage. So that we add one more stage before uploading built directory to S3 called “post-build”.
 

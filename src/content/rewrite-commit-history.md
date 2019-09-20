@@ -1,7 +1,7 @@
 ---
-title: Rewrite commit history
+title: "Rewrite commit history"
 date: "2019-09-08"
-description: As an engineer, we like to keep things organized. Especially, when you are working on the project and the team is growing larger...
+description: "As an engineer, we like to keep things organized. Especially, when you are working on the project and the team is growing larger..."
 draft: false
 path: "/blog/rewrite-commit-history"
 ---
