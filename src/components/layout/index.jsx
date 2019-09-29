@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Header from '../header';
+import Switcher from '../switcher';
 
 import style from './layout.module.less';
 
@@ -28,6 +29,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Switcher />
         <Header />
         <div className={style.content}>
           <main>{children}</main>
