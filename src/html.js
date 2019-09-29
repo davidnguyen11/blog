@@ -13,7 +13,33 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes}>
+      <body {...props.bodyAttributes} className="light">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var theme = 'light';
+                function setTheme(newTheme) {
+                  theme = newTheme;
+                  document.body.className = newTheme;
+                }
+
+                try {
+                  theme = window.localStorage.getItem('theme');
+                  setTheme(theme);
+                } catch (error) {}
+
+                if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+                  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                  darkQuery.addListener(function(e) {
+                    var newTheme = e.matches ? 'dark' : 'light';
+                    setTheme(newTheme);
+                  });
+                }
+              })();
+            `
+          }}
+        />
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

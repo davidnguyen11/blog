@@ -1,8 +1,8 @@
 ---
-title: Introducing React Paginating 🎉🎉🎉
+title: "Introducing React Paginating 🎉🎉🎉"
 date: "2018-02-07"
 draft: false
-description: The introduction of react-paginating which is the flexible package allows easy to customize UI component...
+description: "The introduction of react-paginating which is the flexible package allows easy to customize UI component..."
 path: "/blog/introducing-react-paginating"
 ---
 

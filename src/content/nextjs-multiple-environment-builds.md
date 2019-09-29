@@ -1,7 +1,7 @@
 ---
-title: next.js multiple environment builds
+title: "next.js multiple environment builds"
 date: "2018-01-27"
-description: This article talks about how we manage multiple env builds using nextjs. 
+description: "This article talks about how we manage multiple env builds using nextjs."
 draft: false
 path: "/blog/nextjs-multiple-environment-builds"
 ---

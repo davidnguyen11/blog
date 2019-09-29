@@ -1,40 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const Content = styled.div`
-  margin: 0 auto;
-  max-width: 860px;
-  padding: 1.45rem 1.0875rem;
-`
-
-const ArticleDate = styled.h5`
-  display: inline;
-  color: #606060;
-  margin-bottom: 10px;
-`
-
-const MarkerHeader = styled.h3`
-  display: inline;
-  border-radius: 1em 0 1em 0;
-  margin-bottom: 10px;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
-  );
-`
-
-const ReadingTime = styled.h5`
-  display: inline;
-  color: #606060;
-  margin-bottom: 10px;
-`
+import Layout from '../components/layout';
+import Title from '../components/title';
+import Content from '../components/content';
+import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => {
   return (
@@ -46,26 +16,20 @@ const IndexPage = ({ data }) => {
           <div key={node.id}>
             <Link
               to={node.frontmatter.path}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
-              <MarkerHeader>{node.frontmatter.title} </MarkerHeader>
-              <div>
-                <ArticleDate>{node.frontmatter.date}</ArticleDate>
-                <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
-              </div>
+              <Title level={3} type='title'>{node.frontmatter.title}</Title>
+              <Title level={5} color='dark' type='date'>{node.frontmatter.date} - {node.fields.readingTime.text}</Title>
               <p>{node.frontmatter.description}</p>
             </Link>
           </div>
         ))}
       </Content>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query {
@@ -96,4 +60,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
