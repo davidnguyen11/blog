@@ -15,7 +15,7 @@ import style from './layout.module.less';
 
 import '../../assets/global.less';
 
-const Layout = ({ children }) => (
+const Layout = ({ pageName, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -28,11 +28,14 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header />
+        <Header pageName={pageName} />
         <div className={style.content}>
           <main>{children}</main>
           <footer className={style.footer}>
-            <a className={style.link} href="https://www.linkedin.com/in/dzungnguyen179/">
+            <a
+              className={style.link}
+              href="https://www.linkedin.com/in/dzungnguyen179/"
+            >
               linkedin
             </a>
             {`-`}
@@ -40,7 +43,10 @@ const Layout = ({ children }) => (
               github
             </a>
             {`-`}
-            <a className={style.link} href="https://twitter.com/davidnguyen1791">
+            <a
+              className={style.link}
+              href="https://twitter.com/davidnguyen1791"
+            >
               twitter
             </a>
           </footer>
@@ -52,6 +58,7 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  pageName: PropTypes.string,
 };
 
 export default Layout;

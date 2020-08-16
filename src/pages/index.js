@@ -8,10 +8,9 @@ import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout pageName="blog">
       <SEO title="Blog" />
       <Content>
-        <h1>Blog</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link

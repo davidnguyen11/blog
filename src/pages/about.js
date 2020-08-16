@@ -25,7 +25,7 @@ const AboutPage = () => {
   const image = `${site.siteMetadata.url}${site.siteMetadata.image}`;
 
   return (
-    <Layout>
+    <Layout pageName="about">
       <SEO
         title="About"
         image={image}

@@ -2,7 +2,7 @@
 title: 'Chợ Tốt lite'
 date: '2020-03-22'
 description: 'The story about building Chợ Tốt lite version for low-end devices'
-draft: true
+draft: false
 path: '/blog/chotot-lite'
 ---
 

@@ -8,7 +8,7 @@ path: '/blog/introducing-react-paginating'
 
 ![pages](https://cdn-images-1.medium.com/max/800/1*PIM_Lqn1h4foN3XBqoD5PA.jpeg 'pages')
 
-Today, I am happy to announce a [React Paginating](https://github.com/ChoTotOSS/react-paginating) component.
+[React Paginating](https://github.com/ChoTotOSS/react-paginating) component.
 
 ![gif react-paginating demo](https://cdn-images-1.medium.com/max/1600/1*_O4M_FFMdoj3VkqZ6EMMAQ.gif 'gif react-paginating demo')
 
