@@ -1,19 +1,17 @@
 ---
-title: "next.js multiple environment builds"
-date: "2018-01-27"
-description: "This article talks about how we manage multiple env builds using nextjs."
+title: 'next.js multiple environment builds'
+date: '2018-01-27'
+description: 'This article talks about how we manage multiple env builds using nextjs.'
 draft: false
-path: "/blog/nextjs-multiple-environment-builds"
+path: '/blog/nextjs-multiple-environment-builds'
 ---
 
-![building](https://cdn-images-1.medium.com/max/800/1*qFOpudaR2zUk_lS8Xa526A.jpeg "building")
-
-[https://medium.com/chotot/nextjs-multiple-environment-builds-e8b2ccb11c04](https://medium.com/chotot/nextjs-multiple-environment-builds-e8b2ccb11c04)
-
+![building](https://cdn-images-1.medium.com/max/800/1*qFOpudaR2zUk_lS8Xa526A.jpeg 'building')
 
 # Overview
 
 [Next.js](https://github.com/zeit/next.js/) is a minimalistic framework for the universal web application using [ReactJS](https://reactjs.org/). It was open-sourced 25th October 2016. The company behind Next is [ZEIT](https://zeit.co/). It has huge contributors out there to maintain and improve. Next provides easy interfaces for web development and has some advantages such as:
+
 - Supports server rendering natively.
 - There are many small examples of integrations between next.js and other libraries or technologies (check them out here).
 - The documentation is very clean and up-to-date.
@@ -35,17 +33,19 @@ Recently, we have used next.js for some experiment projects in our company (You 
 - When visiting “home” page, Next will bundle everything belongs to “home” page (index.js).
 - Similarly with “create new” page, Next bundles everything belongs to “create new” page (action.js) into “.next” directory.
 
-![development](https://cdn-images-1.medium.com/max/1600/0*IIR-nu76WmDWbIw2. "Development")
+![development](https://cdn-images-1.medium.com/max/1600/0*IIR-nu76WmDWbIw2. 'Development')
 
 ## production
+
 - Next bundles everything belongs to our web app into “.next” directory.
 - When you visit a page, next will not rebuild again because it already built in “.next” directory.
 
-![production](https://cdn-images-1.medium.com/max/1600/0*iZ1gcg7x4tFG4peM. "Production")
+![production](https://cdn-images-1.medium.com/max/1600/0*iZ1gcg7x4tFG4peM. 'Production')
 
 # Scenario
 
 In our process, we divided a development environment (env) into 3 parts:
+
 - **Development:** for Engineers to develop features.
 - **Staging:** for Quality Assurance (QA) to test features before it comes to real production.
 - **Production:** for Users to use features.
@@ -56,24 +56,27 @@ Below is our package.json scripts to manage to build and run of our web app
 
 ```json
 {
-    "scripts": {
-        "build": "next build",
-        "start:development": "node server.js",
-        "start:staging": "NODE_ENV=staging node server.js",
-        "start:production": "NODE_ENV=production node server.js"
-    }
+  "scripts": {
+    "build": "next build",
+    "start:development": "node server.js",
+    "start:staging": "NODE_ENV=staging node server.js",
+    "start:production": "NODE_ENV=production node server.js"
+  }
 }
 ```
 
 We have 4 commands. In each environment, we will run with order:
 **development**
+
 - npm start
 
 **staging**
+
 - npm run build
 - npm run start:staging
 
 **production**
+
 - npm run build
 - npm run start:production
 
@@ -114,12 +117,12 @@ So here are new “run commands” in **package.json** file:
 
 ```json
 {
-    "scripts": {
-        "build": "next build",
-        "start:development": "node server.js",
-        "start:staging": "NODE_ENV=production ENV=staging node server.js",
-        "start:production": "NODE_ENV=production ENV=production node server.js"
-    }
+  "scripts": {
+    "build": "next build",
+    "start:development": "node server.js",
+    "start:staging": "NODE_ENV=production ENV=staging node server.js",
+    "start:production": "NODE_ENV=production ENV=production node server.js"
+  }
 }
 ```
 
@@ -150,5 +153,3 @@ export default configs;
 This solution works well for our projects using Next. Of course, there are many solutions out there. If you have a better solution, you can give me the feedbacks.
 
 Thank you very much!
-
-

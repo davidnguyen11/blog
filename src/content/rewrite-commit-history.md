@@ -1,16 +1,15 @@
 ---
-title: "Rewrite commit history"
-date: "2019-09-08"
-description: "As an engineer, we like to keep things organized. Especially, when you are working on the project and the team is growing larger..."
+title: 'Rewrite commit history'
+date: '2019-09-08'
+description: 'As an engineer, we like to keep things organized. Especially, when you are working on the project and the team is growing larger...'
 draft: false
-path: "/blog/rewrite-commit-history"
+path: '/blog/rewrite-commit-history'
 ---
 
 ![https://miro.medium.com/max/12000/1*2AmmzTttPrrgM4iKZ75vDQ.jpeg](https://miro.medium.com/max/12000/1*2AmmzTttPrrgM4iKZ75vDQ.jpeg)
 
-You can find the original post [here.](https://medium.com/@dzungnguyen179/rewrite-commit-history-c5940bb28d97)
-
 # Overview
+
 As an engineer, we like to keep things organized. Especially, when you are working on the project and the team is growing larger. That means there are a lot of engineers working on the same source code and a bunch of commits are made every day. Keeping the git history clean and linear makes it easier for all of the engineers to understand what is going on in the source code. Doing so requires using a few advanced git features. In this article we will learn how to perform 4 git tasks that I believe are essential to keeping your commit history minimal and concise before merging it with the main branch.
 
 - Squash & Reword
@@ -23,6 +22,7 @@ Before jumping to the detail. Let’s see why we need clean commit history and w
 # Why clean commit history?
 
 Having the clean commit history brings us 4 main benefits:
+
 - **Documentation**. A linear history is typically easier to follow. This is similar to how you want your code to be well structured and documented: whenever someone needs to deal with it later (code or history) it is very valuable to be able to quickly understand what is going on.
 - **Improving code review efficiency**. If a topic branch is divided into linear, logical steps, it is much easier to review the changes between the PR and a target branch.
 - **When you need to modify the history at a later time**. For instance when reverting or cherry-picking a feature in whole or in part.
@@ -33,7 +33,6 @@ However, beside the benefits there are some drawbacks:
 - The clean commit history is only effective only if all members agree to apply it to their work.
 - To do this requires some advanced git features, the learning curve costs you some time at first.
 - And if you don’t know it well, it can cause you some troubles when you apply it to your project.
-
 
 # Scenario
 
@@ -77,8 +76,8 @@ git commit -m “finished task”
 
 Looking back at the commit history, we see the history of the feature we are working on is lacks meaningful descriptions of changes and in general is messy.
 
-
 # Clean commit history
+
 ## Squash & Reword
 
 - **Squash**: combine commits into 1 commit.
@@ -92,9 +91,7 @@ In order to do that, here is the steps:
 git log --oneline
 ```
 
-
 ![git log --oneline](https://miro.medium.com/max/1992/1*dYl9yK_dGMeCMOLbeJdPgg.png)
-
 
 **2 - Identify how many commits we need to squash and reword**
 
@@ -104,7 +101,7 @@ In this case, we are going to squash 5 commits in the “red box” and reword t
 
 **3 - Rebase to the commit just before the list of commits that you want to squash and reword**
 
-*3.1 - Rebase to commit*
+_3.1 - Rebase to commit_
 
 In this case, it is the sixth commit. Copy the hash string “7c63b5f” and rebase to 6th commit by:
 
@@ -112,12 +109,11 @@ In this case, it is the sixth commit. Copy the hash string “7c63b5f” and reb
 git rebase -i 7c63b5f
 ```
 
-*3.2 - Select options to modify commits*
+_3.2 - Select options to modify commits_
 
 After running the command at previous step, it takes us to Vim screen.
 
 ![Select options to modify commits](https://miro.medium.com/max/2460/1*k5fc4EY_Tp0g0bb1wjHohA.png)
-
 
 So here is what we are doing:
 
@@ -137,7 +133,7 @@ s 00cde97 completed the ListItem
 s 975b990 finished task
 ```
 
-*3.3 - Reword commit message*
+_3.3 - Reword commit message_
 
 After modifying the commits, it takes us to the reword screen.
 
@@ -157,7 +153,7 @@ To:
 
 Then “:wq” (Write & Quit) Vim.
 
-*3.4 - Squash commits*
+_3.4 - Squash commits_
 
 After we done editing the commit message. It takes us to the second screen to squash commits.
 
@@ -174,7 +170,7 @@ To delete lines in the “red box”.
 
 - Then “:wq” (Write & Quit) Vim. Done!
 
-*3.5 - Check if our work was successful or not*
+_3.5 - Check if our work was successful or not_
 
 ```bash
 git log --oneline
@@ -191,6 +187,7 @@ After squashing commits, I create a PR (Pull Request or Merge Request) and add r
 > What do you think about splitting the commit into 2 commits? Because 2 components should correspond to 2 commits. One for ListItem component, the other for List component.
 
 Our mission now is:
+
 - Splitting the squashed commit into 2 different commits.
 - Each commit needs to have its own commit message.
 
