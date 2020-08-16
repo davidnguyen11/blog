@@ -15,7 +15,7 @@ export default ({ data }) => {
       />
       <Content>
         <Heading>{post.frontmatter.title}</Heading>
-        <Heading color='dark' level={4}>
+        <Heading color="dark" level={4}>
           {post.frontmatter.date} - {post.fields.readingTime.text}
         </Heading>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

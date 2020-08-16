@@ -18,8 +18,12 @@ const IndexPage = ({ data }) => {
               to={node.frontmatter.path}
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
-              <Title level={3} type='title'>{node.frontmatter.title}</Title>
-              <Title level={5} color='dark' type='date'>{node.frontmatter.date} - {node.fields.readingTime.text}</Title>
+              <Title level={3} type="title">
+                {node.frontmatter.title}
+              </Title>
+              <Title level={5} color="dark" type="date">
+                {node.frontmatter.date} - {node.fields.readingTime.text}
+              </Title>
               <p>{node.frontmatter.description}</p>
             </Link>
           </div>
