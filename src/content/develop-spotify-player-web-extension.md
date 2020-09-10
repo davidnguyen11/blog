@@ -225,7 +225,13 @@ Here is how it looks like
   <img title="final look" alt="final look" src="https://user-images.githubusercontent.com/6290720/90328322-7ceb1d00-dfd6-11ea-8c31-8a47524c29fe.gif">
 </div>
 
-After one month, the Spotify Player extension is now available on 3 web stores:
+After months, I got first 1 thousand of users on Chrome Web Store.
+
+<div style="text-align: center;">
+  <img title="1 thousand of users on Chrome Web Store" width="634" alt="1 thousand of users on Chrome Web Store" src="https://user-images.githubusercontent.com/6290720/92686019-ce878d00-f373-11ea-998b-715b2ef1ed52.png">
+</div>
+
+The Spotify Player extension is now available on 3 web stores:
 
 **Chrome**
 
