@@ -225,13 +225,13 @@ Here is how it looks like
   <img title="final look" alt="final look" src="https://user-images.githubusercontent.com/6290720/90328322-7ceb1d00-dfd6-11ea-8c31-8a47524c29fe.gif">
 </div>
 
-After months, I got first 1 thousand of users on Chrome Web Store.
+And here is the number of users of Chrome & Firefox browsers:
 
-<div style="text-align: center;">
-  <img title="1 thousand of users on Chrome Web Store" width="634" alt="1 thousand of users on Chrome Web Store" src="https://user-images.githubusercontent.com/6290720/92686019-ce878d00-f373-11ea-998b-715b2ef1ed52.png">
-</div>
+[![Chrome Extension Users](https://img.shields.io/chrome-web-store/users/bhdjjppbnlpjpeicimhemencfgjeldoa?color=0099ff&label=chrome%20users&logo=google-chrome&logoColor=d2ccd2)](https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa) [![Chrome Extension Version](https://img.shields.io/chrome-web-store/v/bhdjjppbnlpjpeicimhemencfgjeldoa?color=0099ff&logo=google-chrome&logoColor=d2ccd2)](https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa)
 
-The Spotify Player extension is now available on 3 web stores:
+[![Firefox Add-On Users](https://img.shields.io/amo/users/spotify-player?color=FF9500&label=mozilla%20users&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/spotify-player/) [![Firefox Add-On Version](https://img.shields.io/amo/v/spotify-player?color=FF9500&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/spotify-player/)
+
+The Spotify Player extension is available on 3 web stores:
 
 **Chrome**
 
