@@ -253,4 +253,8 @@ The Spotify Player extension is available on 3 web stores:
 
 > https://spotify-extension.netlify.app/
 
+**Boilerplate**
+
+> https://github.com/davidnguyen179/web-extension-boilerplate
+
 I really appreciate the community that helps me to improve this extension and friends who help me to test it out.
